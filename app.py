@@ -98,10 +98,10 @@ with st.sidebar:
     st.header('Filters for "night" time')
     filter_sun_elevation = st.slider(
         "Sun elevation (<)",
-        min_value=-30,
+        min_value=-18,
         max_value=0,
         value=DEFAULT_SUN_ELEVATION_FILTER,
-        help="Sun elevation below the horizon in degrees. `0` is sunset.",
+        help="Sun elevation below the horizon in degrees. `0` is sunset. Astronomical twilight generally occurs when the sun is somewhere between 12-18 degrees below the horizon.",
         key="_slider_sun",
     )
     filter_moon_elevation = st.slider(
