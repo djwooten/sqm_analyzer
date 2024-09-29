@@ -211,9 +211,10 @@ with st.sidebar:
         st.write("Unihedron `.dat` files produced by the Unihedron Device Manager")
 
     with st.expander("How do I interpret the plots?"):
-        st.write(
-            "There are three plots stacked vertically on top of one another. Below them is a range selector that can be used to show specific date ranges."
-        )
+        st.write("""
+            There are three plots stacked vertically on top of one another. Below them is a range selector that can be
+            used to show specific date ranges.
+        """)
         st.subheader("Moon Elevation")
         st.write("""
             The top plot shows the moon elevation above the horizon, in degrees. The horizontal line here indicates the
@@ -234,6 +235,13 @@ with st.sidebar:
         st.write("""
             The background color indicates whether the timepoint is considered daylight or nighttime, based on the
             filters. Yellow/gold indicates daytime, and dark blue indicates nighttime.
+        """)
+
+    with st.expander("How can I download the moon and sun data?"):
+        st.write("""
+            There is a button below the plots to download the dataset as a plain-text .csv file. This file includes all
+            the columns from the original SQM data, as well as the moon, sun, and day/night labels. It also includes an
+            estimated calculation of the Naked Eye Limiting Magnitude (NELM).
         """)
 
     with st.expander("How can I save a copy of the plot?"):
@@ -297,20 +305,24 @@ with st.sidebar:
 
     with st.expander("How do I report a bug?"):
         st.write("""
-            This software is not actively maintained. However the source code is open and available at https://github.com/djwooten/sqm_analyzer/
+            This software is not actively maintained. However the source code is open and available at
+            https://github.com/djwooten/sqm_analyzer/
         """)
 
     with st.container(height=None, border=True):
         st.header("Credits")
         st.write("""
-            This software was written by David Wooten. The source code is available at https://github.com/djwooten/sqm_analyzer. It is available under the BSD-3-Clause license.
+            This software was written by David Wooten. The source code is available at
+            https://github.com/djwooten/sqm_analyzer. It is available under the terms of the BSD-3-Clause license.
         """)
         st.write(
             "Moon and sun values are calculated using the [astral](https://pypi.org/project/astral) python library."
         )
-        st.write(
-            "This app is written in [streamlit](https://streamlit.io) and hosted on their (Community Cloud)[https://streamlit.io/cloud]"
-        )
         st.write("""
-            NELM is estimated using the formula at http://unihedron.com/projects/darksky/NELM2BCalc.html.
+            This app is written in [streamlit](https://streamlit.io) and hosted on their
+            [Community Cloud](https://streamlit.io/cloud).
+        """)
+        st.write("""
+            Naked Eye Limiting Magnitude (NELM) is estimated using the formula at
+            http://unihedron.com/projects/darksky/NELM2BCalc.html.
         """)
