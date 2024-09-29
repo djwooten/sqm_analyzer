@@ -306,10 +306,10 @@ with st.sidebar:
             This software was written by David Wooten. The source code is available at https://github.com/djwooten/sqm_analyzer. It is available under the BSD-3-Clause license.
         """)
         st.write(
-            "Moon and sun values are calculated using the [astral](https://pypi.org/projects/astral) python library."
+            "Moon and sun values are calculated using the [astral](https://pypi.org/project/astral) python library."
         )
         st.write(
-            "This app is written in [streamlist](https://streamlit.io) and hosted on their (Community Cloud)[https://streamlit.io/cloud]"
+            "This app is written in [streamlit](https://streamlit.io) and hosted on their (Community Cloud)[https://streamlit.io/cloud]"
         )
         st.write("""
             NELM is estimated using the formula at http://unihedron.com/projects/darksky/NELM2BCalc.html.
